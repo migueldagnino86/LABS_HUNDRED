@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F959C3E2-6875-47A0-B94A-1C8FCAB56493}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hundred.Labs.ServiceImplementation</RootNamespace>
+    <AssemblyName>Hundred.Labs.ServiceImplementation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Sales.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hundred.Labs.BusinessEntities\Hundred.Labs.BusinessEntities.csproj">
+      <Project>{8480D7A3-9A31-4295-9485-15B3507111C6}</Project>
+      <Name>Hundred.Labs.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hundred.Labs.BusinessLogic\Hundred.Labs.BusinessLogic.csproj">
+      <Project>{BDFC98B2-F845-4F50-AA4D-70FBAAEA610D}</Project>
+      <Name>Hundred.Labs.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hundred.Labs.DataContracts\Hundred.Labs.DataContracts.csproj">
+      <Project>{EE75E369-861A-4D8B-B1D8-92120385FA9F}</Project>
+      <Name>Hundred.Labs.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hundred.Labs.MessageContracts\Hundred.Labs.MessageContracts.csproj">
+      <Project>{738744F4-8ADD-4B2E-B822-C1481553A1F7}</Project>
+      <Name>Hundred.Labs.MessageContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hundred.Labs.ServiceContracts\Hundred.Labs.ServiceContracts.csproj">
+      <Project>{0A740022-0667-4C7E-85BB-F642E0B80643}</Project>
+      <Name>Hundred.Labs.ServiceContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
